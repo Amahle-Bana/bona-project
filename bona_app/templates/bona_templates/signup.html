@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- TAB TITLE -->
+        <title>Sign-Up To Bona</title>
+        <!-- VIEWPORT -->
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <!-- LINK -->
+        <link href="{% static 'bona_static/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Sign-Up into<span>Bona</span></h1>
+        <form action="" class="login_form" method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="text" placeholder="Enter Password" name="password" required>
+            <label for="password_confirm">Confirmation Password:</label>
+            <input type="text" placeholder="Confirmation Password" name="password_confirm" required>
+            <button class="login_submit" type="submit">
+            <div>Have An Account?<span url="">Login</span></div>
+        </form>
+    </body>
+</html>
