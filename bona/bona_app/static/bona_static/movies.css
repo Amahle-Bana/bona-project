@@ -1,0 +1,470 @@
+/*================== IMPORTING CSS STYLE ===================*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&display=swap');
+
+/*===================== HEADER SECTION =======================*/
+
+/* HEADER */
+header {
+    height: 60px;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: absolute;
+    z-index: 1;
+}
+/* HEADER LOGO */
+header .header_logo {
+    color: white;
+    color: rgb(28, 231, 131);
+    margin-left: 20px;
+    font-family: 'Bungee', serif;
+    font-style: normal;
+}
+header .header_logo:hover {
+    color: rgba(28, 231, 131,0.7);
+    cursor: pointer;
+}
+/* HEADER NAVIGATION */
+header .header_nav {
+    color: white;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row;
+}
+header .header_nav .nav_item {
+    padding: 10px 20px;
+    list-style: none;
+}
+header .header_nav .nav_item a {
+    text-decoration: none;
+    color: rgb(28, 231, 131);
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+}
+header .header_nav .nav_item a:hover {
+    color: rgba(28, 231, 131,0.7);
+    cursor: pointer;
+}
+/* HEADER OPTIONS */
+header .header_options {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+header .header_options .header_search {
+    padding-left: 200px;
+}
+header .header_options .header_search img {
+    height: 30px;
+    padding: 5px;
+}
+
+
+header .header_options .header_notification img {
+    height: 30px;
+    padding: 5px;
+}
+
+header .header_options .header_settings img {
+    height: 30px;
+    padding: 5px;
+}
+
+header .header_options .header_user div {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(28, 231, 131);
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(16, 37, 48);
+}
+header .header_options .header_user div:hover {
+    background-color: rgba(28, 231, 131,0.7);
+    cursor: pointer;
+}
+
+/*================== MAIN SECTION =====================*/
+
+/* MAIN SECTION */
+
+.main_section {
+    height: 600px;
+    width: 100%;
+    margin: 0px;
+}
+/* SECTION 1 */
+
+/* SECTION 1 BACKGROUND VIDEO */
+.background_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* SECTION 1 BACKGROUND VIDEO */
+.video_gradient {
+    background-color: transparent;
+    background-image: linear-gradient(to right,rgb(16, 37, 48), rgba(255, 255, 255, 0.3));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2200px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* SECTION 1 DETAILS*/
+.section_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 620px;
+}
+.section_1_details {
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.section_1_details .movies_label {
+    color:rgb(28, 231, 131);
+    font-family: 'Bungee Hairline', serif;
+    font-weight: bold;
+}
+.section_1_details .section_1_video_type {
+    color:rgb(28, 231, 131);
+    font-size: larger;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+}
+.section_1_details .section_1_video_type span {
+    font-family: 'Bungee', serif;
+    font-style: normal;
+}
+
+.section_1_details .section_1_image {
+    width: 200px;
+}
+.section_1_details .section_1_description {
+    color:rgb(28, 231, 131);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+}
+.section_1_options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    color:rgb(28, 231, 131);
+}
+.section_1_play {
+    border: 1px solid rgb(28, 231, 131);
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    border-radius: 25px;
+    color: rgb(16, 37, 48);
+    background-color: rgb(28, 231, 131);
+}
+.section_1_play:hover {
+    background-color: rgba(28, 231, 131, 0.7);
+    cursor: pointer;
+}
+.section_1_moreinfo {
+    border: 1px solid rgb(28, 231, 131);
+    width: 120px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(16, 37, 48);
+    background-color: rgb(28, 231, 131);
+    border-radius: 25px;
+}
+.section_1_moreinfo:hover {
+    background-color: rgba(28, 231, 131, 0.7);
+    cursor: pointer;
+}
+.section_1_notes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    color:rgb(28, 231, 131);
+}
+.section_1_tags {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+}
+.section_1_age {
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    border: 1px solid rgb(28, 231, 131);
+    border-radius: 35px;
+    height: 100%;
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color:rgb(16, 37, 48);
+    background-color: rgb(28, 231, 131);
+}
+
+/* SECTION 2 */
+
+.section_2 {
+    height: 1550px;
+    width: 100%;
+    margin: 0px;
+    background-color: transparent;
+    background-image: linear-gradient(to right,rgb(16, 37, 48), rgb(4, 4, 5));
+}
+/* SECTION 2 SLIDER 1 */
+.section_2_slider_1 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_2_slider_1 .movie_list_name {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:rgb(28, 231, 131);
+    width: 87%;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+}
+.section_2_slider_1 .movie_list {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.section_2_slider_1 .section_2_prev_button {
+    width: 50px;
+}
+.section_2_slider_1 .section_2_next_button {
+    width: 50px;
+}
+.section_2_slider_1 .movie_item {
+    height: 230px;
+    border-radius: 15px;
+}
+
+
+.section_2_slider_2 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_2_slider_2 .movie_list_name {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:rgb(28, 231, 131);
+    width: 87%;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+}
+.section_2_slider_2 .movie_list {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.section_2_slider_2 .section_2_prev_button {
+    width: 50px;
+}
+.section_2_slider_2 .section_2_next_button {
+    width: 50px;
+}
+.section_2_slider_2 .movie_item {
+    height: 230px;
+    border-radius: 15px;
+}
+
+
+
+.section_2_slider_3 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_2_slider_3 .movie_list_name {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:rgb(28, 231, 131);
+    width: 87%;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+}
+.section_2_slider_3 .movie_list {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.section_2_slider_3 .section_2_prev_button {
+    width: 50px;
+}
+.section_2_slider_3 .section_2_next_button {
+    width: 50px;
+}
+.section_2_slider_3 .movie_item {
+    height: 230px;
+    border-radius: 15px;
+}
+
+
+
+.section_2_slider_4 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_2_slider_4 .movie_list_name {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:rgb(28, 231, 131);
+    width: 87%;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+}
+.section_2_slider_4 .movie_list {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.section_2_slider_4 .section_2_prev_button {
+    width: 50px;
+}
+.section_2_slider_4 .section_2_next_button {
+    width: 50px;
+}
+.section_2_slider_4 .movie_item {
+    height: 230px;
+    border-radius: 15px;
+}
+
+
+
+.section_2_slider_5 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_2_slider_5 .movie_list_name {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:rgb(28, 231, 131);
+    width: 87%;
+    font-family: 'Bungee Hairline', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+}
+.section_2_slider_5 .movie_list {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.section_2_slider_5 .section_2_prev_button {
+    width: 50px;
+}
+.section_2_slider_5 .section_2_next_button {
+    width: 50px;
+}
+.section_2_slider_5 .movie_item {
+    height: 230px;
+    border-radius: 15px;
+}
