@@ -17,10 +17,12 @@
             <!-- LOGIN HEADER -->
             <h1 class="signup_header">Sign-Up into <span>Bona</span></h1>
             <!-- LOGIN FORM -->
-            <form action="" class="signup_form" method="post">
+            <form action="{% url 'signup' %}" class="signup_form" method="post">
                 {% csrf_token %}
                 <label class="signup_label"  for="username">Username</label>
                 <input class="signup_input" type="text" placeholder="Enter Username" name="username" required>
+                <label class="signup_label" for="email">Email</label>
+                <input class="signup_input" type="text" placeholder="Enter Your Email" name="email" required>
                 <label class="signup_label" for="password">Password</label>
                 <input class="signup_input" type="text" placeholder="Enter Password" name="password" required>
                 <label class="signup_label" for="password_confirm">Confirmation Password</label>
