@@ -1,0 +1,132 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- TAB TITLE -->
+        <title>Bona</title>
+        <!-- VIEWPORT  -->
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <!-- LINK -->
+        <link href="{% static 'bona_static/tvshows.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <!-- HEADER LOGO -->
+            <h1 class="header_logo">Bona</h1>
+            <!-- HEADER NAVIGATION -->
+            <nav class="header_nav">
+                <li class="nav_item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="nav_item"><a href="{% url 'tvshows' %}">TV Shows</a></li>
+                <li class="nav_item"><a href="{% url 'movies' %}">Movies</a></li>
+                <li class="nav_item"><a href="{% url 'kids' %}">Kids</a></li>
+                <li class="nav_item"><a href="{% url 'mylist' %}">My List</a></li>
+            </nav>
+            <!-- HEADER OPTIONS -->
+            <div class="header_options">
+                <div class="header_search"><img src="{% static "icons/search_icon.png" %}"></div>
+                <div class="header_notification"><img src="{% static 'icons/notification_icon.png' %}"></div>
+                <div class="header_settings"><img src="{% static 'icons/options_icon.png' %}"></div>
+                <div class="header_user"><div>A</div></div>
+            </div>
+        </header>
+        <main class="main_section"> 
+            <video class="background_video" width="800" height="500" autoplay muted>
+                <source src="{{ main_movie.movie_trailer }}" type="video/mp4">
+                    Your browser doesn't support this video format
+            </video>
+            <div class="video_gradient"></div>
+            <section class="section_1">
+                <div class="section_1_details">
+                    <div class="tvshows_options">
+                        <label class="tvshows_label" for="tvshows">TV Shows</label>
+                        <select class="tvshows_select" name="tvshows">
+                            <options class="select_option" value="">Action</options>
+                            <options class="select_option" value="">Anime</options>
+                            <options class="select_option" value="">Award-Winning</options>
+                            <options class="select_option" value="">Classics</options>
+                            <options class="select_option" value="">Comedy</options>
+                            <options class="select_option" value="">Crime</options>
+                            <options class="select_option" value="">Documentaries</options>
+                            <options class="select_option" value="">Dramas</options>
+                            <options class="select_option" value="">Fantasy</options>
+                            <options class="select_option" value="">Horror</options>
+                            <options class="select_option" value="">Kids &amp; Family</options>
+                            <options class="select_option" value="">Musicals</options>
+                            <options class="select_option" value="">Romance</options>
+                            <options class="select_option" value="">Sci-Fi</options>
+                            <options class="select_option" value="">Sports</options>
+                            <options class="select_option" value="">Stand-Up Comedy</options>
+                            <options class="select_option" value="">Thriller</options>
+                        </select>
+                    </div>
+                    <div class="section_1_video_type">A <span>Bona</span> Original Show</div>
+                    <img class="section_1_image" src="{{ main_movie.movie_logo.url }}">
+                    <p class="section_1_description">{{ main_movie.movie_description }}</p>
+                    <div class="section_1_options">
+                        <div class="section_1_play">Play</div>
+                        <div class="section_1_moreinfo">More Info</div>
+                    </div>
+                    <div class="section_1_notes">
+                        <div class="section_1_tags"><div class="section_1_tag">{{ main_movie.movie_genre }}</div></div>
+                        <div class="section_1_age">{{ main_movie.movie_age_restriction }}</div>
+                    </div>
+                </div>
+            </section>
+            <section class="section_2">
+                <div class="section_2_slider_1">
+                    <div class="movie_list_name">Trending TV Shows</div>
+                    <div class="movie_list">
+                        <div class="section_2_prev"><img class="section_2_prev_button" src="{% static 'icons/sort_left.png' %}"></div>
+                            {% for trend in trending %}
+                                <img class="movie_item" src="{{ trend.movie_poster.url }}" alt="{{ trend.movie_name }}">
+                            {% endfor %}
+                        <div class="section_2_next"><img class="section_2_next_button" src="{% static 'icons/sort_right.png' %}"></div>
+                    </div>
+                </div>
+                <div class="section_2_slider_2">
+                    <div class="movie_list_name">Award Winning TV Shows</div>
+                    <div class="movie_list">
+                        <div class="section_2_prev"><img class="section_2_prev_button" src="{% static 'icons/sort_left.png' %}"></div>
+                        {% for award in award_winning %}
+                            <img class="movie_item" src="{{ award.movie_poster.url }}" alt="{{ award.movie_name }}">
+                        {% endfor %}
+                        <div class="section_2_next"><img class="section_2_next_button" src="{% static 'icons/sort_right.png' %}"></div>
+                    </div>
+                </div>
+                <div class="section_2_slider_3">
+                    <div class="movie_list_name">Top TV Shows Picks For You</div>
+                    <div class="movie_list">
+                        <div class="section_2_prev"><img class="section_2_prev_button" src="{% static 'icons/sort_left.png' %}"></div>
+                            {% for top_shows in top_tv_shows %}
+                                <img class="movie_item" src="{{ top_shows.movie_poster.url }}" alt="{{ top_shows.movie_name }}">
+                            {% endfor %}
+                        <div class="section_2_next"><img class="section_2_next_button" src="{% static 'icons/sort_right.png' %}"></div>
+                    </div>
+                </div>
+                <div class="section_2_slider_4">
+                    <div class="movie_list_name">Critically Acclaimed TV Shows</div>
+                    <div class="movie_list">
+                        <div class="section_2_prev"><img class="section_2_prev_button" src="{% static 'icons/sort_left.png' %}"></div>
+                            {% for acclaimed in critically_acclaimed %}
+                                <img class="movie_item" src="{{ acclaimed.movie_poster.url }}" alt="{{ acclaimed.movie_name }}">
+                            {% endfor %}
+                        <div class="section_2_next"><img class="section_2_next_button" src="{% static 'icons/sort_right.png' %}"></div>
+                    </div>
+                </div>
+                <div class="section_2_slider_5">
+                    <div class="movie_list_name">My List</div>
+                    <div class="movie_list">
+                        <div class="section_2_prev"><img class="section_2_prev_button" src="{% static 'icons/sort_left.png' %}"></div>
+                            {% for listed in my_list %}
+                                <img class="movie_item" src="{{ listed.movie_poster.url }}" alt="{{ listed.movie_name }}">
+                            {% endfor %}
+                        <div class="section_2_next"><img class="section_2_next_button" src="{% static 'icons/sort_right.png' %}"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
