@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- TAB TITLE -->
+        <title>Bona</title>
+        <!-- VIEWPORT  -->
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <!-- LINK -->
+        <link href="{% static 'bona_static/mylist.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <!-- HEADER LOGO -->
+            <h1 class="header_logo">Bona</h1>
+            <!-- HEADER NAVIGATION -->
+            <nav class="header_nav">
+                <li class="nav_item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="nav_item"><a href="{% url 'tvshows' %}">TV Shows</a></li>
+                <li class="nav_item"><a href="{% url 'movies' %}">Movies</a></li>
+                <li class="nav_item"><a href="{% url 'kids' %}">Kids</a></li>
+                <li class="nav_item"><a href="{% url 'mylist' %}">My List</a></li>
+            </nav>
+            <!-- HEADER OPTIONS -->
+            <div class="header_options">
+                <div class="header_search"><img src="{% static "icons/search_icon.png" %}"></div>
+                <div class="header_notification"><img src="{% static 'icons/notification_icon.png' %}"></div>
+                <div class="header_settings"><img src="{% static 'icons/options_icon.png' %}"></div>
+                <div class="header_user"><div>A</div></div>
+            </div>
+        </header>
+        <main class="main_section"> 
+            <section class="section_1">
+                {% for item in my_list %}
+                    <img class="movie_item" src="{{ item.movie_poster.url }}" alt="{{ item.movie_name }}">
+                {% endfor %}
+            </section>
+        </main>
+    </body>
+</html>
